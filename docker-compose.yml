@@ -1,0 +1,33 @@
+version: '2.0'
+services:
+ config-service:
+    build: ./config-service
+    container_name: ms-sample-config-server
+    ports:
+        - "8888:8888"
+    networks:
+        - mssample-network 
+ 
+ discovery-service:
+    build: ./discovery-service
+    container_name: discovery
+    ports: 
+        - "8761:8761"
+    depends_on: 
+        - config-service
+    networks:
+        - mssample-network
+
+ product-service:
+    build: ./product-service
+    container_name: product
+    ports: 
+        - "8080:8080"
+    depends_on: 
+        - config-service
+    networks:
+        - mssample-network
+
+networks:
+    mssample-network:
+       driver: bridge
