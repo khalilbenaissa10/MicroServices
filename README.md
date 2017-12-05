@@ -19,8 +19,11 @@
 	- **product-service**
 
 Au niveau desquels on definit: 
+
 	- L'image de base à partir de laquelle on va construire nos conteneurs. À l'aide de l'instruction "FROM".
+	
 	- Le point de montage à créer. À l'aide de l'instruction "VOLUME".
+	
 	- Le port réseau spécifié sur lequel le conteneur va rester en écoute. À l'aide de l'instruction "EXPOSE".
 	- Les fichiers, les répertoires ou les URLs des fichiers distante à ajouter au système de fichiers de l'image.. À l'aide de l'instruction "ADD".
 	- Les commandes Shell à excécuter pour executer nos conteneurs. À l'aide de l'instruction "CMD".
