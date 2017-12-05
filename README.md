@@ -12,7 +12,7 @@
 
 ## Étapes
 
-**1. Géneration d'un fichier "Dockerfile" pour chaque Projet**:
+**1. Géneration d'un fichier "Dockerfile" pour chaque Projet:**
 	- **config-service**
 	- **discovery-service**
 	- **proxy-service**
@@ -25,14 +25,14 @@ Au niveau desquels on definit:
 	- Les fichiers, les répertoires ou les URLs des fichiers distante à ajouter au système de fichiers de l'image.. À l'aide de l'instruction "ADD".
 	- Les commandes Shell à excécuter pour executer nos conteneurs. À l'aide de l'instruction "CMD".
 
-**2. Géneration du "Docker Compose"; qui permet de définir et d'exécuter nos applications Docker multi-conteneurs**:
+**2. Géneration du "Docker Compose"; qui permet de définir et d'exécuter nos applications Docker multi-conteneurs:**
 
-Au niveau desquels on definit: 
+Au niveau desquels on definit
 	- Nos services web en utilisant les images créées à partir ds Dockerfiles déja définis dans notre répertoire. 
 	- Un réseau "mssample-network" de type **Bridge** pour nostre application. Chaque conteneur du service rejoint le réseau. I est accessible à la fois par d'autres conteneurs sur ce réseau.
 	- la dépendance des services au service "config-service" pour assusrer le démarrage des services dans l'ordre de dépendance et l'inclusion des dépendances au niveau des services.
 
-**3. Génenartion des fichiers de configuration "application.yml" pour notre service de configuration et "bootstrap.yml" pour les autres services**:
+**3. Génenartion des fichiers de configuration "application.yml" pour notre service de configuration et "bootstrap.yml" pour les autres services:**
 
 Au niveau du "application.yml", on définit:
 	- L'uri du repository de la configuration du serveur qui contient la ocnfiguration des autres services.
