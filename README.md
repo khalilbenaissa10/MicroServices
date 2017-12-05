@@ -58,5 +58,5 @@ docker-compose up
 ```
 qui permet de lancer et connecter chaque conteneur au service en question.  
 
-###Rq:  
+*Rq:*  
 La commande **docker-compose up** permet aussi de faire un **build** avant de lancer les conteneurs.  
